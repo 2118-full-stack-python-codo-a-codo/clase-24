@@ -2,7 +2,6 @@
 
 class Player:
 
-    score = 0
     def __init__(self, nombre, id) -> None:
         """
         Contructor.
@@ -11,6 +10,7 @@ class Player:
         """
         self.__nombre = nombre
         self.__id = id
+        self.__score = 0
 
     @property
     def id(self):
@@ -30,6 +30,14 @@ class Player:
     
     def getNombre(self) -> str:
         return self.__nombre
+
+    @property
+    def score(self):
+        return self.__score
+
+    @score.setter
+    def score(self, value):
+        self.__score = value
 
     def __str__(self) -> str:
         """
